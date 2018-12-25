@@ -1,9 +1,20 @@
 <ion-header>
   <ion-navbar>
-    <button ion-button menuToggle>
-      <ion-icon name="menu"></ion-icon>
-    </button>
-    <ion-title>Hello Ionic</ion-title>
+
+    <ion-buttons start>
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+    </ion-buttons>
+
+    <ion-title>Ionic</ion-title>
+
+    <ion-buttons end>
+      <button ion-button icon-only (click)="showPromptAlert()">
+        <ion-icon name="cloud-upload"></ion-icon>
+      </button>
+    </ion-buttons>
+
   </ion-navbar>
 </ion-header>
 
@@ -11,18 +22,44 @@
 <ion-content padding>
 
   <h3>Welcome to your first Ionic app!</h3>
+  <button ion-button color="primary" menuToggle>Toggle Menu</button>
 
-  <p>
-    This starter project is our way of helping you get a functional app running in record time.
-  </p>
-  <p>
-    Follow along on the tutorial section of the Ionic docs!
-  </p>
-  <p>
-    <button ion-button color="primary" menuToggle>Toggle Menu</button>
-  </p>
-  <button ion-button block (click)="openMenu()">Show Action Sheet</button>
-  <button ion-button inline-block (click)="showPromptAlert()">Show Prompt Alert</button>
-  <button ion-button inline-block (click)="showRadioAlert()">Show Radio Alert</button>
+  <button ion-button outline (click)="openMenu()" icon-start>
+    <ion-icon name="home"></ion-icon>
+    Show Action Sheet
+  </button>
+  <button ion-button round (click)="showRadioAlert()">Show Radio Alert</button>
+  
+  <ion-card>
+    <ion-card-header>
+      Explore Nearby
+    </ion-card-header>
+    <ion-list>
+      <button ion-item>
+        <ion-icon name="cart" item-start></ion-icon>
+        Shopping
+      </button>
+      <button ion-item>
+        <ion-icon name="medical" item-start></ion-icon>
+        Hospital
+      </button>
+      <button ion-item>
+        <ion-icon name="cafe" item-start></ion-icon>
+        Cafe
+      </button>
+      <button ion-item>
+        <ion-icon name="paw" item-start></ion-icon>
+        Dog Park
+      </button>
+      <button ion-item>
+        <ion-icon name="beer" item-start></ion-icon>
+        Pub
+      </button>
+      <button ion-item>
+        <ion-icon name="planet" item-start></ion-icon>
+        Space
+      </button>
+    </ion-list>
+  </ion-card>
 
 </ion-content>
